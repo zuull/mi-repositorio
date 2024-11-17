@@ -1,25 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Components
+// Componentes
 import Header from "./components/Header";
-import Home from './pages/home/Home';
-import Recetas from "./pages/recetas/Recetas";
-import AcercaDeMi from "./pages/acerca-de-mi/AcercaDeMi";
-import Footer from "./components/Footer";
+import Inicio from "./pages/Inicio";
+import SobreMi from "./pages/SobreMi";
+import Proyectos from "./pages/Proyectos";
+import Contacto from "./pages/Contacto";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <Header/>
-        <main className="flex-grow">
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/recetas' element={<Recetas/>}/>
-            <Route path='/acerca-de-mi' element={<AcercaDeMi/>}/>
-          </Routes>
-        </main>
-        <Footer/>
+      <div className="min-h-screen bg-[#F6F6F6] text-gray-800 font-sans">
+        <Header />
+        <Routes>
+          <Route path='/' element={<Inicio />}/>
+          <Route path='/sobre-mi' element={<SobreMi />}/>
+          <Route path='/proyectos' element={<Proyectos />}/>
+          <Route path='/contacto' element={<Contacto />}/>
+        </Routes>
       </div>
     </BrowserRouter>
 );
